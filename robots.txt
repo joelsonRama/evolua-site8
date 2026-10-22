@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.evoluatecnologia.com.br/sitemap.xml
