@@ -7,7 +7,8 @@ const EVOLUA = {
     telefone: '',        // como deve aparecer. Ex.: '(11) 99999-9999'
     email: '',           // Ex.: 'contato@evoluatecnologia.com.br'
     instagram: '',       // só o usuário, sem @. Ex.: 'evoluatecnologia'
-    cidade: ''           // Ex.: 'São Paulo - SP'
+    cidade: '',          // Ex.: 'São Paulo - SP'
+    empresa: ''          // razão social e CNPJ. Ex.: 'Evolua Tecnologia LTDA • CNPJ 00.000.000/0001-00'
 };
 
 (function () {
@@ -39,7 +40,8 @@ const EVOLUA = {
         whatsapp: EVOLUA.whatsapp && { href: waLink('Olá! Vim pelo site da Evolua Tecnologia.'), text: EVOLUA.telefone || '+' + EVOLUA.whatsapp },
         email: EVOLUA.email && { href: 'mailto:' + EVOLUA.email, text: EVOLUA.email },
         instagram: EVOLUA.instagram && { href: 'https://instagram.com/' + EVOLUA.instagram, text: '@' + EVOLUA.instagram },
-        cidade: EVOLUA.cidade && { href: '', text: EVOLUA.cidade }
+        cidade: EVOLUA.cidade && { href: '', text: EVOLUA.cidade },
+        empresa: EVOLUA.empresa && { href: '', text: EVOLUA.empresa }
     };
     document.querySelectorAll('[data-contact]').forEach(function (el) {
         const c = contacts[el.getAttribute('data-contact')];
@@ -52,7 +54,7 @@ const EVOLUA = {
         }
     });
     document.querySelectorAll('[data-contact-empty]').forEach(function (el) {
-        el.hidden = Object.values(contacts).some(Boolean);
+        el.hidden = ['whatsapp', 'email', 'instagram', 'cidade'].some(function (k) { return contacts[k]; });
     });
     const waFloat = document.querySelector('.wa-float');
     if (waFloat && EVOLUA.whatsapp) {
