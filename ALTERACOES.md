@@ -21,3 +21,5 @@ Tudo aqui fica na branch `proximas-alteracoes` e só vai para o site quando for 
 - [x] "Para quem" compacto, numa linha só (saiu "Cantinas e clubes", que ficava sozinho no meio). Chamada final: "Quer conhecer o Evolua Ticket?" com os botões "Fale conosco" e "Área do cliente" (vai direto para o login do cliente), sem menção a parceria ou homologação. Mesmo ajuste na página do Evolua Ticket.
 - [x] Tema escuro: fundo azul-marinho escuro em todo o site, quadros em azul-marinho mais claro, textos claros. Cabeçalho com o degradê do app emendando no fundo escuro; rodapé mais escuro. Bordas brancas das imagens das maquininhas limpas para o fundo escuro.
 - [x] "Produtos Evolua" (Ticket, Parking, PDV) virou a última seção da página inicial, depois da chamada final.
+- [x] Página do Evolua Ticket: abertura com as mesmas 3 maquininhas reais da página inicial, com o selo "Em homologação".
+- [x] Barra de cima e rodapé em preto piano (preto brilhante com reflexo), em todas as páginas.
