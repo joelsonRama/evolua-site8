@@ -543,3 +543,20 @@ body{background:var(--bg);color:var(--text)}
 .form-done b{display:block;font-size:22px;margin-bottom:8px;color:#4ade80}
 .form-done p{color:var(--muted)}
 [hidden]{display:none!important}
+
+/* ---------- Página PagBank ---------- */
+.pb-device{display:flex;justify-content:center}
+.pb-device img{width:min(300px,70vw);height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.pb-table{max-width:960px;margin:0 auto;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.pb-row{display:grid;grid-template-columns:220px 1fr;gap:18px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.pb-row:last-child{border-bottom:0}
+.pb-row b{color:#fff}
+.pb-row span{color:var(--muted)}
+.pb-steps{grid-template-columns:repeat(4,1fr)}
+.pb-company{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.pb-company div{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card-2),var(--card))}
+.pb-company .full{grid-column:1/-1}
+.pb-company small{display:block;color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.pb-link{color:#7fb6ff;font-weight:700}
+@media (max-width:860px){.pb-steps{grid-template-columns:1fr 1fr}.pb-row{grid-template-columns:1fr;gap:4px}}
+@media (max-width:520px){.pb-steps,.pb-company{grid-template-columns:1fr}}
