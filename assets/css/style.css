@@ -426,3 +426,13 @@ a.contact-item:hover{border-color:var(--blue)}
     .compat-card.wide{grid-column:span 3}
     .compat-card.phone-card{grid-column:span 2}
 }
+
+/* Passo a passo compacto */
+.section-compact{padding:60px 0}
+.section-compact .section-head{margin-bottom:28px}
+.section-compact .section-head h2{font-size:clamp(24px,2.6vw,32px);margin-bottom:0}
+.steps .step{display:grid;grid-template-columns:40px 1fr;column-gap:14px;align-items:start;align-content:start;padding:20px 22px}
+.steps .step::before{grid-row:span 2;margin:0}
+.steps .step h3{font-size:17px;margin:2px 0 4px}
+.steps .step p{font-size:14.5px}
+@media (max-width:720px){.section-compact{padding:44px 0}}

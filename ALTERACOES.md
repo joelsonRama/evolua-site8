@@ -16,3 +16,4 @@ Tudo aqui fica na branch `proximas-alteracoes` e só vai para o site quando for 
 - [x] Impressora Bluetooth real (foto enviada) no lugar da desenhada, com a ficha do Evolua Ticket no papel.
 - [x] Fichas impressas trocadas para produtos que aparecem nas telas (SKOL, X-SALADA, CHURROS).
 - [x] Seção das maquininhas reescrita para vender o produto ("Venda, cobrança e impressão em um único equipamento"), sem menção a homologação. Saiu o quadro "Outras credenciadoras". Quadros renomeados para "Na maquininha de cartão" (Tudo em um) e "No celular" (Mobilidade).
+- [x] "Como funciona" mais curto e mais baixo: "Do cadastro à venda em minutos" com os passos Crie seu evento, Cadastre seus produtos e Saia vendendo (número ao lado do título, cartões menores). Vale também na página do Evolua Ticket.
