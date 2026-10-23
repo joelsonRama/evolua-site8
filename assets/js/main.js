@@ -49,6 +49,7 @@ const EVOLUA = {
     document.querySelectorAll('[data-contact]').forEach(function (el) {
         const c = contacts[el.getAttribute('data-contact')];
         if (!c) { el.hidden = true; return; }
+        el.hidden = false;
         const label = el.querySelector('[data-contact-text]');
         if (label) label.textContent = c.text;
         if (el.tagName === 'A' && c.href) {
