@@ -536,3 +536,10 @@ body{background:var(--bg);color:var(--text)}
 .footer{background:radial-gradient(1200px 260px at 50% 0,rgba(255,255,255,.07),transparent 70%),linear-gradient(180deg,#121317,#050506 40%,#000 100%);border-top:1px solid rgba(255,255,255,.10)}
 .footer-bottom{border-top-color:rgba(255,255,255,.08)}
 @media (max-width:940px){.nav{background:linear-gradient(180deg,#101114,#050506)}}
+
+/* Formulário: campo anti-robô escondido e aviso de enviado */
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.form-done{padding:30px 10px;text-align:center}
+.form-done b{display:block;font-size:22px;margin-bottom:8px;color:#4ade80}
+.form-done p{color:var(--muted)}
+[hidden]{display:none!important}

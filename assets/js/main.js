@@ -3,11 +3,14 @@
    Preencha os contatos aqui. Campo vazio = não aparece no site.
 ========================================================= */
 const EVOLUA = {
-    whatsapp: '',        // só números, com DDI e DDD. Ex.: '5511999999999'
-    telefone: '',        // como deve aparecer. Ex.: '(11) 99999-9999'
-    email: '',           // Ex.: 'contato@evoluatecnologia.com.br'
-    instagram: '',       // só o usuário, sem @. Ex.: 'evoluatecnologia'
-    cidade: '',          // Ex.: 'São Paulo - SP'
+    whatsapp: '5549988625010', // só números, com DDI e DDD. Ex.: '5511999999999'
+    telefone: '(49) 98862-5010', // como deve aparecer. Ex.: '(11) 99999-9999'
+    email: 'joelsonsistemas@gmail.com', // Ex.: 'contato@evoluatecnologia.com.br'
+    instagram: 'evoluaticket', // só o usuário, sem @. Ex.: 'evoluatecnologia'
+    cidade: 'Rodovia SC-157, Km 98, Bairro Industrial, Cordilheira Alta - SC', // Ex.: 'São Paulo - SP'
+    // Endereço que recebe as mensagens dos formulários (painel do Administrador Geral > Mensagens do site).
+    // Vazio: o formulário abre o WhatsApp com a mensagem pronta.
+    mensagens: '',
     empresa: ''          // razão social e CNPJ. Ex.: 'Evolua Tecnologia LTDA • CNPJ 00.000.000/0001-00'
 };
 
@@ -62,23 +65,39 @@ const EVOLUA = {
         waFloat.hidden = false;
     }
 
-    /* Formulários: montam a mensagem e abrem o WhatsApp (ou o e-mail) */
+    /* Formulários: enviam para o painel (EVOLUA.mensagens); sem endereço ou se falhar, abrem o WhatsApp com a mensagem pronta */
+    const openWhatsApp = function (form) {
+        const lines = [form.getAttribute('data-send')];
+        form.querySelectorAll('[name]').forEach(function (f) {
+            const v = (f.value || '').trim();
+            if (v && f.name !== 'site') lines.push((f.getAttribute('data-label') || f.name) + ': ' + v);
+        });
+        const msg = lines.join('\n');
+        if (EVOLUA.whatsapp) {
+            window.open(waLink(msg), '_blank', 'noopener');
+        } else if (EVOLUA.email) {
+            window.location.href = 'mailto:' + EVOLUA.email + '?subject=' + encodeURIComponent(lines[0]) + '&body=' + encodeURIComponent(msg);
+        }
+    };
     document.querySelectorAll('form[data-send]').forEach(function (form) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            const lines = [form.getAttribute('data-send')];
-            form.querySelectorAll('[name]').forEach(function (f) {
-                const v = (f.value || '').trim();
-                if (v) lines.push((f.getAttribute('data-label') || f.name) + ': ' + v);
-            });
-            const msg = lines.join('\n');
-            if (EVOLUA.whatsapp) {
-                window.open(waLink(msg), '_blank', 'noopener');
-            } else if (EVOLUA.email) {
-                window.location.href = 'mailto:' + EVOLUA.email + '?subject=' + encodeURIComponent(lines[0]) + '&body=' + encodeURIComponent(msg);
-            } else {
-                alert('Os contatos ainda estão sendo configurados. Tente novamente em breve.');
-            }
+            if (!EVOLUA.mensagens) { openWhatsApp(form); return; }
+            const btn = form.querySelector('button[type=submit]');
+            const data = new FormData(form);
+            if (!data.get('assunto')) data.set('assunto', form.getAttribute('data-send'));
+            data.set('origem', location.pathname.split('/').pop() || 'index.html');
+            if (btn) { btn.disabled = true; btn.dataset.text = btn.innerHTML; btn.textContent = 'Enviando...'; }
+            fetch(EVOLUA.mensagens, { method: 'POST', body: data })
+                .then(function (r) { return r.json(); })
+                .then(function (r) {
+                    if (!r.ok) throw new Error(r.error || 'erro');
+                    form.innerHTML = '<div class="form-done"><b>Mensagem enviada!</b><p>Obrigado pelo contato. A nossa equipe vai responder em breve.</p></div>';
+                })
+                .catch(function () {
+                    if (btn) { btn.disabled = false; btn.innerHTML = btn.dataset.text; }
+                    openWhatsApp(form);
+                });
         });
     });
 

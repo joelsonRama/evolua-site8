@@ -23,3 +23,6 @@ Tudo aqui fica na branch `proximas-alteracoes` e só vai para o site quando for 
 - [x] "Produtos Evolua" (Ticket, Parking, PDV) virou a última seção da página inicial, depois da chamada final.
 - [x] Página do Evolua Ticket: abertura com as mesmas 3 maquininhas reais da página inicial, com o selo "Em homologação".
 - [x] Barra de cima e rodapé em preto piano (preto brilhante com reflexo), em todas as páginas.
+- [x] Contatos preenchidos: WhatsApp (49) 98862-5010, e-mail joelsonsistemas@gmail.com, Instagram @evoluaticket e endereço Rodovia SC-157, Km 98, Bairro Industrial, Cordilheira Alta - SC. Botão flutuante do WhatsApp ativo.
+- [x] Formulários preparados para mandar as mensagens para o painel do Administrador Geral (campo `mensagens` no `assets/js/main.js`). Enquanto o endereço estiver vazio, continuam abrindo o WhatsApp. Campo de e-mail no formulário de contato e campo anti-robô escondido.
+- [ ] Depois de publicar a branch `mensagens-do-site` do sistema no Railway: preencher `mensagens: 'https://giropdv-server-production.up.railway.app/contato_site.php'`.

@@ -56,7 +56,7 @@
     </div>
     <form class="form-card reveal" data-send="Contato pelo site da Evolua Tecnologia">
       <h3>Envie sua mensagem</h3>
-      <p>Preencha os campos e abrimos a conversa com a Evolua.</p>
+      <p>Preencha os campos e a nossa equipe retorna o contato.</p>
       <div class="field"><label for="c-nome">Nome</label><input id="c-nome" name="nome" data-label="Nome" required autocomplete="name"></div>
       <div class="field-row">
         <div class="field"><label for="c-tel">WhatsApp</label><input id="c-tel" name="whatsapp" data-label="WhatsApp" inputmode="tel" required autocomplete="tel"></div>
@@ -71,8 +71,12 @@
           </select>
         </div>
       </div>
-      <div class="field"><label for="c-empresa">Empresa (opcional)</label><input id="c-empresa" name="empresa" data-label="Empresa" autocomplete="organization"></div>
+      <div class="field-row">
+        <div class="field"><label for="c-email">E-mail (opcional)</label><input id="c-email" name="email" data-label="E-mail" type="email" autocomplete="email"></div>
+        <div class="field"><label for="c-empresa">Empresa (opcional)</label><input id="c-empresa" name="empresa" data-label="Empresa" autocomplete="organization"></div>
+      </div>
       <div class="field"><label for="c-msg">Mensagem</label><textarea id="c-msg" name="mensagem" data-label="Mensagem" required></textarea></div>
+      <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn-primary btn-block" type="submit">Enviar mensagem <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </form>
   </div>
