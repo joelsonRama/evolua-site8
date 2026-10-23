@@ -436,3 +436,17 @@ a.contact-item:hover{border-color:var(--blue)}
 .steps .step h3{font-size:17px;margin:2px 0 4px}
 .steps .step p{font-size:14.5px}
 @media (max-width:720px){.section-compact{padding:44px 0}}
+
+/* ---------- Painel de gestão (prints reais) ---------- */
+.panel-section{background:linear-gradient(180deg,#fff,var(--bg-soft))}
+.panel-intro{grid-template-columns:.85fr 1.15fr;margin-bottom:56px}
+.shot{margin:0;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 24px 60px rgba(15,32,72,.14)}
+.shot-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#eef2f8;border-bottom:1px solid var(--line)}
+.shot-bar i{width:10px;height:10px;border-radius:50%;background:#cfd8e6}
+.shot-bar i:nth-child(1){background:#f87171}.shot-bar i:nth-child(2){background:#fbbf24}.shot-bar i:nth-child(3){background:#34d399}
+.shot-bar span{margin-left:10px;font-size:12px;font-weight:600;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot img{width:100%;height:auto}
+.panel-duo{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.duo-item h3{font-size:20px;margin:22px 0 8px}
+.duo-item p{color:var(--muted);font-size:15.5px}
+@media (max-width:900px){.panel-intro{grid-template-columns:1fr;margin-bottom:40px}.panel-duo{grid-template-columns:1fr}}
