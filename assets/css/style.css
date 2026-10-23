@@ -455,3 +455,78 @@ a.contact-item:hover{border-color:var(--blue)}
 .section-compact .uses{flex-wrap:nowrap;gap:8px}
 .section-compact .uses span{padding:8px 13px;font-size:14px;white-space:nowrap}
 @media (max-width:900px){.section-compact .uses{flex-wrap:wrap}}
+
+/* =========================================================
+   TEMA ESCURO: fundo azul-marinho escuro, quadros em azul-marinho mais claro
+========================================================= */
+:root{
+    --bg:#050d24;
+    --bg-soft:#081534;
+    --card:#0e1f48;
+    --card-2:#122656;
+    --text:#eef3ff;
+    --muted:#a3b3d4;
+    --line:rgba(148,178,255,.14);
+    --shadow:0 20px 50px rgba(0,0,0,.35);
+}
+body{background:var(--bg);color:var(--text)}
+.brand{color:#fff}
+
+/* Cabeçalho: mesmo degradê do app, mais escuro à esquerda para emendar com o fundo */
+.header{background:linear-gradient(90deg,#050d24 0%,#071a4a 35%,#0d2e7a 70%,#1546b8 100%);border-bottom:1px solid rgba(103,232,249,.18);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+/* Abertura */
+.hero{background:radial-gradient(900px 520px at 80% 15%,rgba(43,140,255,.28),transparent 65%),radial-gradient(700px 500px at 0% 100%,rgba(34,211,238,.10),transparent 60%),linear-gradient(180deg,#071434,#050d24);border-bottom:1px solid var(--line)}
+.lockup b{color:#fff}
+.hero h1 .hl,.hero-second h2 .hl{color:#5aa2ff}
+.hero .lead{color:var(--muted)}
+.hero-checks{color:#d3ddf5}
+.eyebrow{background:rgba(43,140,255,.16);color:#7fb6ff}
+.eyebrow .dot{background:#7fb6ff}
+.eyebrow.amber{background:rgba(245,158,11,.16);color:#fbbf24}
+.real-dev img{filter:drop-shadow(0 24px 30px rgba(0,0,0,.55))}
+.hero-devices::before{background:radial-gradient(rgba(0,0,0,.5),transparent 70%)}
+
+/* Botões */
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
+.btn-outline:hover{border-color:#5aa2ff;color:#fff;background:rgba(90,162,255,.12)}
+
+/* Seções */
+.section-soft,.panel-section,.devices-section{background:var(--bg-soft);border-color:var(--line)}
+.kicker{color:#67e8f9}
+.section-head p,.split p,.duo-item p{color:var(--muted)}
+.strip{background:var(--bg-soft);border-color:var(--line)}
+.strip div{color:#d3ddf5}
+.strip div + div{border-color:var(--line)}
+.strip svg{color:#5aa2ff}
+
+/* Quadros */
+.compat-card,.feature,.step,.product,.form-card,.contact-item,.access-big .card,.rm,.platform,.uses span,.shot,.kpi{background:linear-gradient(180deg,var(--card-2),var(--card));border-color:var(--line);color:var(--text)}
+.feature:hover{border-color:rgba(90,162,255,.45);box-shadow:var(--shadow)}
+.compat-head small,.compat-devices figcaption,.feature p,.step p,.product p,.contact-item small,.access-big .card > p,.rm p,.platform small,.legal p,.legal li,.help-line,.form-card > p,.form-note{color:var(--muted)}
+.compat-devices figcaption b{color:#fff}
+.feature .f-ic,.contact-item .ic{background:rgba(43,140,255,.16);color:#7fb6ff}
+.checklist li svg,.access-big li svg,.uses svg,.platform svg{color:#5aa2ff}
+.pill{background:rgba(34,197,94,.15);color:#4ade80}
+.pill.blue{background:rgba(43,140,255,.18);color:#7fb6ff}
+.pill.amber{background:rgba(245,158,11,.16);color:#fbbf24}
+.rm.done{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.35)}
+.rm.done small{color:#4ade80}
+.rm small{color:#7fb6ff}
+.shot{box-shadow:0 26px 60px rgba(0,0,0,.45)}
+.shot-bar{background:#0a1838;border-color:var(--line)}
+.shot-bar span{color:var(--muted)}
+.compat-devices.real img{filter:drop-shadow(0 20px 24px rgba(0,0,0,.5))}
+
+/* Formulários */
+.field label{color:#c9d6f2}
+.field input,.field select,.field textarea{background:#091a3d;border-color:rgba(148,178,255,.22);color:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{background:#0b1f49;border-color:#5aa2ff}
+.field select option{background:#0b1f49;color:#fff}
+
+/* Textos institucionais e 404 */
+.legal a,.help-line a{color:#7fb6ff}
+.notfound b{color:#5aa2ff}
+
+/* Rodapé emenda com o fundo */
+.footer{background:#030918;border-top:1px solid var(--line)}
