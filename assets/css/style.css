@@ -419,4 +419,5 @@ a.contact-item:hover{border-color:var(--blue)}
 .compat-devices.real figure{flex:1;max-width:210px}
 .compat-devices.real img{width:100%;height:auto;filter:drop-shadow(0 18px 22px rgba(15,32,72,.22))}
 .compat-card.full{grid-column:1/-1}
-.compat-devices.real figure.phone-set{max-width:340px}
+.compat-devices.real figure.phone-set{max-width:none;width:100%}
+.compat-card:has(.phone-set) .compat-devices{align-items:center}
