@@ -15,3 +15,4 @@ Tudo aqui fica na branch `proximas-alteracoes` e só vai para o site quando for 
 - [x] Telas das maquininhas (na abertura e na seção de compatibilidade) e do celular com fotos reais dos produtos enviadas pelo Joelson: bebidas na Moderninha, lanches na Stone, doces na Cielo e mix no celular. Os 5 hambúrgueres, as latas e as garrafas foram recortados um a um.
 - [x] Impressora Bluetooth real (foto enviada) no lugar da desenhada, com a ficha do Evolua Ticket no papel.
 - [x] Fichas impressas trocadas para produtos que aparecem nas telas (SKOL, X-SALADA, CHURROS).
+- [x] Seção das maquininhas reescrita para vender o produto ("Venda, cobrança e impressão em um único equipamento"), sem menção a homologação. Saiu o quadro "Outras credenciadoras". Quadros renomeados para "Na maquininha de cartão" (Tudo em um) e "No celular" (Mobilidade).
