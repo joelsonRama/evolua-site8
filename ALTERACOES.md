@@ -12,5 +12,6 @@ Tudo aqui fica na branch `proximas-alteracoes` e só vai para o site quando for 
 - [x] Fichas refeitas: agora saem da boca da impressora de cada maquininha, subindo e com a ponta curvada para trás, e não deitadas por cima. Logos apagados com retoque (Cielo e LIO em cima, "stone" embaixo da tela); o da Moderninha fica atrás da ficha.
 - [x] Quadro "Celular Android": celular moderno inclinado na frente com o Evolua Ticket na tela e impressora térmica portátil atrás com a ficha (código de barras e QR Code) saindo, no arranjo do esboço enviado. São ilustrações nossas (não foto); dá para trocar por foto real depois.
 - [x] Celular do quadro "Celular Android" bem maior, ocupando o quadro, com a impressora ao lado.
-- [ ] Fotos reais dos produtos nas telas das maquininhas e do celular: aguardando fotos.
-- [ ] Impressora Bluetooth real no quadro do celular: aguardando foto.
+- [x] Telas das maquininhas (na abertura e na seção de compatibilidade) e do celular com fotos reais dos produtos enviadas pelo Joelson: bebidas na Moderninha, lanches na Stone, doces na Cielo e mix no celular. Os 5 hambúrgueres, as latas e as garrafas foram recortados um a um.
+- [x] Impressora Bluetooth real (foto enviada) no lugar da desenhada, com a ficha do Evolua Ticket no papel.
+- [x] Fichas impressas trocadas para produtos que aparecem nas telas (SKOL, X-SALADA, CHURROS).
