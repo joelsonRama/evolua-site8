@@ -450,3 +450,8 @@ a.contact-item:hover{border-color:var(--blue)}
 .duo-item h3{font-size:20px;margin:22px 0 8px}
 .duo-item p{color:var(--muted);font-size:15.5px}
 @media (max-width:900px){.panel-intro{grid-template-columns:1fr;margin-bottom:40px}.panel-duo{grid-template-columns:1fr}}
+
+/* Para quem: compacto, numa linha só */
+.section-compact .uses{flex-wrap:nowrap;gap:8px}
+.section-compact .uses span{padding:8px 13px;font-size:14px;white-space:nowrap}
+@media (max-width:900px){.section-compact .uses{flex-wrap:wrap}}
