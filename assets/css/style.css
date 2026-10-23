@@ -421,3 +421,8 @@ a.contact-item:hover{border-color:var(--blue)}
 .compat-card.full{grid-column:1/-1}
 .compat-devices.real figure.phone-set{max-width:none;width:100%}
 .compat-card:has(.phone-set) .compat-devices{align-items:center}
+@media (min-width:1001px){
+    .compat{grid-template-columns:repeat(5,1fr)}
+    .compat-card.wide{grid-column:span 3}
+    .compat-card.phone-card{grid-column:span 2}
+}
