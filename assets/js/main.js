@@ -11,7 +11,7 @@ const EVOLUA = {
     // Endereço que recebe as mensagens dos formulários (painel do Administrador Geral > Mensagens do site).
     // Vazio: o formulário abre o WhatsApp com a mensagem pronta.
     mensagens: '',
-    empresa: ''          // razão social e CNPJ. Ex.: 'Evolua Tecnologia LTDA • CNPJ 00.000.000/0001-00'
+    empresa: 'Evolua Tecnologia • CNPJ 17.735.913/0001-59' // razão social e CNPJ. Ex.: 'Evolua Tecnologia LTDA • CNPJ 00.000.000/0001-00'
 };
 
 (function () {
