@@ -719,6 +719,15 @@ legal('termos.html', 'Termos de Uso',
 <p>O Evolua Ticket é um sistema de venda de fichas para eventos que roda em maquininhas Android. A cobrança no cartão e no PIX é processada pela credenciadora da maquininha, conforme o contrato do cliente com ela. A Evolua não é instituição de pagamento e não recebe nem repassa os valores das vendas.</p>
 <h2>2. Licença de uso</h2>
 <p>Cada maquininha precisa de uma licença ativa. A licença é pessoal, intransferível e vale pelo período contratado. É proibido copiar, modificar, revender ou fazer engenharia reversa do sistema.</p>
+<h2 id="licencas">2.1 Compra de licenças, pagamento e reembolso</h2>
+<ul>
+<li><b>Licenças não são reembolsáveis.</b> Depois de paga e liberada, a licença não é devolvida, estornada nem trocada por dinheiro.</li>
+<li><b>O período não utilizado não é devolvido.</b> A licença vale pelo período contratado a partir da ativação; dias ou licenças que sobrarem não geram reembolso nem crédito.</li>
+<li>Cada licença ativa uma maquininha pelo período escolhido (5, 10 ou 30 dias, conforme os planos disponíveis).</li>
+<li>O pagamento é feito por PIX, gerado pela nossa plataforma de cobrança (Asaas). A cobrança é emitida no CPF ou CNPJ informado no cadastro; se o PIX for pago por outra pessoa ou empresa, o documento de quem paga deve ser informado no campo próprio na hora da compra.</li>
+<li>A licença é liberada automaticamente depois da confirmação do pagamento pela plataforma de cobrança.</li>
+<li>Ao clicar em "Gerar PIX", o cliente declara que leu e aceitou estas condições.</li>
+</ul>
 <h2>3. Responsabilidades do cliente</h2>
 <ul>
 <li>Manter login e senhas em segurança e controlar quem opera as maquininhas.</li>
