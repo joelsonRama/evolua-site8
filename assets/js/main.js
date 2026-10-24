@@ -10,7 +10,7 @@ const EVOLUA = {
     cidade: 'Rodovia SC-157, Km 98, Bairro Industrial, Cordilheira Alta - SC', // Ex.: 'São Paulo - SP'
     // Endereço que recebe as mensagens dos formulários (painel do Administrador Geral > Mensagens do site).
     // Vazio: o formulário abre o WhatsApp com a mensagem pronta.
-    mensagens: '',
+    mensagens: 'https://painel.evoluatecnologia.com.br/contato_site.php',
     empresa: 'JR Eventos e Serviços • CNPJ 17.735.913/0001-59' // razão social e CNPJ. Ex.: 'Evolua Tecnologia LTDA • CNPJ 00.000.000/0001-00'
 };
 
