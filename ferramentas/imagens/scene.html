@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}
+html,body{background:transparent}
+body{width:800px;height:1040px;position:relative;overflow:hidden}
+/* ---------- impressora térmica portátil ---------- */
+.printer{position:absolute;left:420px;top:560px;width:360px;height:330px;transform:scale(.92);transform-origin:left top}
+.printer svg{position:absolute;inset:0;overflow:visible}
+.ticket{position:absolute;left:96px;width:168px;bottom:257px;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.lip{position:absolute;left:0;top:0;width:360px;height:330px;pointer-events:none}
+/* ---------- celular ---------- */
+.phone{position:absolute;left:46px;top:60px;width:420px;height:795px;border-radius:66px;transform:rotate(-6deg);
+ background:linear-gradient(135deg,#5b6170 0%,#2a2e36 18%,#16181d 50%,#3b404b 82%,#6b7280 100%);
+ box-shadow:0 40px 60px rgba(10,15,30,.35),0 12px 20px rgba(10,15,30,.25),inset 0 0 0 1.5px rgba(255,255,255,.18);padding:12px}
+.phone::before{content:"";position:absolute;right:-5px;top:210px;width:6px;height:110px;border-radius:3px;background:linear-gradient(90deg,#2a2e36,#5b6170)}
+.phone::after{content:"";position:absolute;left:-5px;top:180px;width:6px;height:64px;border-radius:3px;background:linear-gradient(90deg,#5b6170,#2a2e36);box-shadow:0 86px 0 #3b404b}
+.glass{position:relative;width:100%;height:100%;border-radius:56px;background:#000;padding:9px;overflow:hidden}
+.screen{position:relative;width:100%;height:100%;border-radius:48px;overflow:hidden;background:#000}
+.screen img{position:absolute;left:0;top:42px;width:100%;height:calc(100% - 42px);object-fit:cover;object-position:top}
+.status{position:absolute;left:0;right:0;top:0;height:46px;background:#071a4a;color:#fff;font:600 17px Inter,sans-serif;display:flex;justify-content:space-between;align-items:center;padding:6px 36px 0 42px;z-index:2}
+.status i{display:inline-block;width:22px;height:10px;border:1.5px solid #fff;border-radius:3px;position:relative;margin-left:5px}
+.status i::after{content:"";position:absolute;inset:1.5px 5px 1.5px 1.5px;background:#fff;border-radius:1px}
+.island{position:absolute;z-index:3;top:15px;left:50%;transform:translateX(-50%);width:124px;height:34px;border-radius:18px;background:#000}
+.shine{position:absolute;inset:0;border-radius:56px;background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.04) 28%,transparent 40%,transparent 100%);pointer-events:none;z-index:4}
+.printer-real{position:absolute;left:372px;top:500px;width:420px;filter:drop-shadow(0 26px 30px rgba(10,15,30,.3))}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet"></head><body>
+<img class="printer-real" src="impressora-real.png">
+<div class="phone"><div class="glass"><div class="screen">
+  <div class="status"><span>21:14</span><span>5G <i></i></span></div>
+  <img src="screen.png">
+</div><div class="island"></div><div class="shine"></div></div></div>
+</body></html>

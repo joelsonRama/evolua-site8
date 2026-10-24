@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:540px;height:1012px;overflow:hidden;font-family:Inter,sans-serif;background:#e8eef8}
+.app{width:540px;height:1012px;display:flex;flex-direction:column;background:#e8eef8;color:#0b1a3a}
+.top{display:flex;align-items:center;gap:14px;padding:30px 20px 18px;background:linear-gradient(90deg,#071a4a,#0d2e7a,#1546b8);color:#fff}
+.menu{width:30px;height:22px;background:linear-gradient(#fff,#fff) 0 0/100% 4px no-repeat,linear-gradient(#fff,#fff) 0 50%/100% 4px no-repeat,linear-gradient(#fff,#fff) 0 100%/100% 4px no-repeat}
+.top img{width:52px;height:52px}
+.top b{display:block;font-size:17px;font-weight:900;letter-spacing:3px}.top b span{color:#67e8f9}
+.top strong{display:block;font-size:27px;font-weight:800;line-height:1.1}
+.top small{display:flex;align-items:center;gap:8px;font-size:17px;color:#c7d5f5}.top small i{width:12px;height:12px;border-radius:50%;background:#4ade80}
+.chips{display:flex;gap:10px;padding:14px 16px 8px}
+.chips span{padding:9px 18px;border-radius:999px;font-size:18px;font-weight:700;background:#fff;border:2px solid #c6d3ea;color:#4b5c7e}
+.chips span.on{background:#1652f0;border-color:#1652f0;color:#fff}
+.grid{flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:repeat(4,1fr);gap:10px;padding:6px 14px 12px}
+.grid div{position:relative;display:flex;flex-direction:column;border-radius:16px;background:#fff;border:2px solid #c6d3ea;overflow:hidden;box-shadow:0 2px 6px rgba(11,26,58,.06)}
+.grid .ph{flex:1;min-height:0;background:#fff center/contain no-repeat;margin:6px 6px 0;border-radius:10px}
+.grid .ph.cover{background-size:cover;margin:0;border-radius:0}
+.grid p{padding:6px 6px 8px;text-align:center;border-top:4px solid var(--c)}
+.grid b{display:block;font-size:16px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grid small{display:block;font-size:15px;font-weight:800;color:#0b6fa8;margin-top:1px}
+.grid em{position:absolute;z-index:2;top:6px;right:6px;min-width:30px;height:30px;border-radius:15px;display:grid;place-items:center;font-style:normal;font-size:16px;font-weight:900;background:#15803d;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.bottom{display:flex;align-items:center;gap:12px;padding:18px 18px 22px;background:linear-gradient(90deg,#071a4a,#0d2e7a,#1546b8);color:#fff}
+.bottom div{flex:1}.bottom small{display:block;font-size:17px;color:#c7d5f5}.bottom b{font-size:38px;font-weight:900}
+.bottom span{padding:18px 26px;border-radius:14px;background:#2b8cff;font-weight:900;font-size:21px;letter-spacing:1px}
+</style></head><body><div class="app" id="app"></div>
+<script>
+const C={b:'#2b8cff',c:'#f59e0b',d:'#ec4899'};
+const S={
+ bebidas:{ev:'Festa da Cidade',st:'Online • Caixa 03',chips:['Bebidas','Lanches','Doces','Combos'],c:C.b,items:[
+  ['agua-crystal','Água','5,00',1],['cerveja-skol','Skol','8,00',2],['cerveja-brahma','Brahma','8,00'],
+  ['cerveja-heineken','Heineken','12,00'],['cerveja-budweiser-473','Budweiser','12,00'],['cerveja-original','Original','10,00'],
+  ['lata-guarana','Guaraná','6,00'],['lata-pepsi','Pepsi','6,00'],['lata-sukita','Sukita','6,00'],
+  ['balde-cerveja','Balde 5 un.','55,00'],['vodka-smirnoff','Dose Vodka','15,00',0,1],['whisky-passport','Dose Whisky','18,00']],n:'3 itens',t:'R$ 21,00'},
+ comidas:{ev:'Quermesse São José',st:'Online • Barraca 2',chips:['Lanches','Bebidas','Doces'],c:C.c,items:[
+  ['hamburguer-cheddar','X-Cheddar','22,00',1],['hamburguer-salada','X-Salada','24,00'],['hamburguer-bacon-barbecue','X-Bacon BBQ','28,00'],
+  ['hamburguer-duplo-bacon','Duplo Bacon','34,00'],['hamburguer-cebola-caramelizada','X-Cebola','29,00'],['cachorro-quente','Cachorro-quente','12,00',1],
+  ['batata-frita','Batata frita','15,00'],['batata-chips','Batata chips','10,00'],['pipoca','Pipoca','8,00'],
+  ['crepe','Crepe','14,00'],['churros-chocolate','Churros','10,00',0,1],['maca-do-amor','Maçã do amor','8,00']],n:'2 itens',t:'R$ 34,00'},
+ combos:{ev:'Show na Praça',st:'Sem internet • vendas guardadas',chips:['Doces','Lanches','Bebidas'],c:C.d,items:[
+  ['churros-chocolate','Churros chocolate','10,00',1,1],['churros-doce-de-leite','Churros doce de leite','10,00',0,1],['crepe','Crepe','14,00'],
+  ['morango-chocolate','Morango no palito','9,00'],['maca-do-amor','Maçã do amor','8,00'],['pipoca','Pipoca','8,00'],
+  ['batata-chips','Batata chips','10,00'],['chiclete','Chiclete','3,00'],['agua-crystal','Água','5,00'],
+  ['lata-guarana','Guaraná','6,00'],['cerveja-skol','Skol','8,00'],['cachorro-quente','Cachorro-quente','12,00']],n:'1 item',t:'R$ 10,00'},
+ celular:{ev:'Quermesse São José',st:'Online • Barraca 2',chips:['Lanches','Bebidas','Doces'],c:C.c,items:[
+  ['cachorro-quente','Cachorro-quente','12,00',1],['hamburguer-salada','X-Salada','24,00'],['hamburguer-duplo-bacon','Duplo Bacon','34,00'],
+  ['batata-frita','Batata frita','15,00',1],['pipoca','Pipoca','8,00'],['crepe','Crepe','14,00'],
+  ['churros-doce-de-leite','Churros','10,00',0,1],['maca-do-amor','Maçã do amor','8,00'],['morango-chocolate','Morango no palito','9,00'],
+  ['lata-guarana','Guaraná','6,00'],['agua-crystal','Água','5,00'],['cerveja-skol','Skol','8,00']],n:'2 itens',t:'R$ 27,00'}
+};
+const k=location.hash.slice(1)||'bebidas', s=S[k];
+document.getElementById('app').innerHTML=`<div class="top"><i class="menu"></i><img src="evolua-mark.svg"><div><b>EVOLUA <span>TICKET</span></b><strong>${s.ev}</strong><small><i></i>${s.st}</small></div></div>
+<div class="chips">${s.chips.map((c,i)=>`<span class="${i?'':'on'}">${c}</span>`).join('')}</div>
+<div class="grid">${s.items.map(([f,n,p,q,cov])=>`<div style="--c:${s.c}">${q?`<em>${q}</em>`:''}<i class="ph${cov?' cover':''}" style="background-image:url(${f}.jpg)"></i><p><b>${n}</b><small>R$ ${p}</small></p></div>`).join('')}</div>
+<div class="bottom"><div><small>${s.n} • toque para ver</small><b>${s.t}</b></div><span>COBRAR</span></div>`;
+</script></body></html>

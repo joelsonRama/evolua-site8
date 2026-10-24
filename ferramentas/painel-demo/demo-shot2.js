@@ -1,0 +1,13 @@
+const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+(async () => { const b = await chromium.launch(); const o=process.argv[2];
+ const p = await b.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1.5});
+ await p.goto('http://127.0.0.1:8090/index.php'); await p.fill('input[name=email]','demo'); await p.fill('input[name=password]','demo123');
+ await Promise.all([p.waitForNavigation(), p.click('button[type=submit], .submit')]);
+ await p.goto('http://127.0.0.1:8090/admin.php?page=dashboard&event=EV-FESTA'); await p.waitForTimeout(1500);
+ await p.screenshot({path:o+'/real-dashboard.png'});
+ await p.goto('http://127.0.0.1:8090/admin.php?page=dashboard&date_from=2026-01-01&date_to=2026-12-31'); await p.waitForTimeout(1500); await p.evaluate(()=>window.scrollTo(0,560)); await p.waitForTimeout(500);
+ await p.screenshot({path:o+'/real-graficos.png'});
+ await p.setViewportSize({width:1440,height:1000});
+ await p.goto('http://127.0.0.1:8090/admin.php?page=monitor'); await p.waitForTimeout(1500);
+ await p.screenshot({path:o+'/real-monitor.png'});
+ await b.close(); })();
